@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background: #454545;
+  color: #fff;
+  background-image: url(https://img.freepik.com/free-vector/realistic-paper-style-abstract-ornamental-background_79603-2436.jpg?size=626&ext=jpg&ga=GA1.1.339649930.1696791755&semt=ais);
+   /* background-size: cover;
+  background-repeat: no-repeat;  */
+} 
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 20px;
+}
+
+.first,.second{
+  flex-basis: 50%;
+  padding: 10px;
+}
+img{
+  height: 30px;
+}
+
+textarea{
+  width: 100%;
+  height: 28%;
+  background: #1f1f1f;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+}
+
+iframe{
+  width: 100%;
+  height: 95%;
+  background: beige;
+  border: 0;
+  outline: 0;
+}
+
+label i{
+  margin-right: 10px;
+  margin-left: 10px;  
+}
+
+label{
+  display: flex;
+  align-items: center;
+  background: #000;
+  height: 30px;
+}
+
+

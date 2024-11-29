@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+    </header>
+    <nav class="navbar">
+      <a href="#" style="--i:1" class="active">Home</a>
+      <a href="#" style="--i:2">About</a>
+      <a href="#" style="--i:3">Skills</a>
+      <a href="#" style="--i:4">Projects</a>
+      <a href="#" style="--i:5">Contact</a>
+    </nav>
+    <section class="home">
+      <div class="content">
+        <h3>Hello, It's Me</h3>
+        <h1>Pranay Jain</h1>
+        <h3>And I'm a <span class="text"></span></h3>
+        <p> <font style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+          <br>I'm a 2nd year CSE student at AITR. <br />
+          Intern at E-CELL IIT BHU, CodersCave, CipherByteTechnologies <br />
+          Ex-Intern at Y-Hills.</font>
+        </p>
+        <div class="home-sci">
+          <a href="https://www.linkedin.com/in/pranay-jain-1254a5258/" target="_blank" style="--i:7"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="https://github.com/PranayyJain"  target="_blank" style="--i:8"><i class="bx bxl-github"></i></a>
+          <a href="https://www.facebook.com/pranay.jain.3914" style="--i:9"  target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="https://www.instagram.com/pranay._.jain_/?hl=en" style="--i:10"  target="_blank"><i class='bx bxl-instagram-alt'></i></i></a>
+        </div>
+        <a href="Netflix Clone/index.html" target="_blank" class="btn-box"> <i>Project ~</i> Netflix Clone</a> &nbsp;&nbsp;&nbsp;
+        <a href="Code Editor IDE/index.html" target="_blank" class="btn-box">  <i>Project ~</i> Online Code Compiler</a>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins' , sans-serif;
+}
+
+body{
+  color: white;
+  background: rgb(8, 27, 41);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* z-index: 100; */
+  background-color: rgba(21, 16, 117, 0.205);
+}
+
+.logo{
+  position: relative;
+  font-size: 45px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+.logo:hover{
+  color: aqua;
+
+}
+
+
+.navbar{
+  margin-left: 700px;
+}
+
+.navbar a{
+  display: inline-block;
+  align-items: end;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-left: 55px;
+  transition: .3s;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s *var(--i)) ;
+}
+
+.navbar a:hover{
+    color: aqua;
+  
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background: url(ppic.jpg) no-repeat ;
+  background-size: 600px;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+
+.content{
+  max-width: 600px;
+}
+
+.content h3{
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+}
+
+.content h3:nth-of-type(2){
+  margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.content h3 span{
+  color: #0ef;
+}
+
+.content h1{
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.content p{
+  font-size: 20px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+}
+
+.home-sci a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s *var(--i));
+}
+
+.home-sci a:hover{
+  background: #0ef;
+  color: rgb(8, 27, 41) ;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box{
+  display: inline-block;
+  padding: 12px 20px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: rgb(8, 27, 41) ;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600px;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef,
+  0 0 25px #0ef;
+
+}
+
+.btn-box:hover{
+  background: #0ef;
+  color: rgb(8, 27, 41) ;
+  box-shadow: 0 0 5px cyan,
+  0 0 25px cyan,0 0 100px cyan,0 0 150px cyan;
+}
+
+@keyframes slideRight{
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft{
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideTop{
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom{
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+var typed = new Typed(".text", {
+  strings: [ "Web Developer", "FrontEnd Developer","Student"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+});

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="coding.png" type="x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="first">
+        <label><img src="html-5 (1).png" />&nbsp;&nbsp;HTML</label>
+        <textarea
+          name="html"
+          id="html-code"
+          placeholder="Type your HTML code here ~ "
+          onkeyup="run()"
+        ></textarea>
+
+        <label><img src="css-3.png" />&nbsp;&nbsp;CSS</label>
+        <textarea
+          name="css"
+          id="css-code"
+          placeholder="Type your CSS code here ~ "
+          onkeyup="run()"
+        ></textarea>
+
+        <label><img src="js.png" /> &nbsp;&nbsp;JavaScript</label>
+        <textarea
+          name="js"
+          id="js-code"
+          placeholder="Type your JS code here ~ "
+          onkeyup="run()"
+        ></textarea>
+      </div>
+      <div class="second">
+        <label>
+          <img src="enter.png" />&nbsp;&nbsp;Output &nbsp;&nbsp;<img
+            src="coding.png"
+          />
+        </label>
+        <iframe id="output"></iframe>
+      </div>
+    </div>
+
+    <script>
+      function run() {
+        let htmlCode = document.getElementById("html-code").value;
+        let cssCode = document.getElementById("css-code").value;
+        let jsCode = document.getElementById("js-code").value;
+        let output = document.getElementById("output");
+
+        output.contentDocument.body.innerHTML =
+          htmlCode + "<style>" + cssCode + "</style>";
+        output.contentWindow.eval(jsCode);
+      }
+    </script>
+  </body>
+</html>
+
+<!-- HTML CODE ~
+  <button id="Btn" class="red">Subscribe</button> 
+
+      CSS CODE ~
+    #Btn{
+ border-radius: 12px;
+margin: 200px;
+}
+
+.red {
+    background-color: red;
+    color: white;
+    padding: 20px 40px; 
+    font-size: 16px; 
+}
+
+.grey {
+    background-color: grey;
+    color: black;
+    padding: 20px 40px; 
+    font-size: 16px; 
+}
+
+#Btn:hover {
+    background-color: blue;
+}
+
+    JS CODE ~
+
+    const Btn = document.getElementById('Btn');
+
+Btn.addEventListener('click', () => {
+    if (Btn.classList.contains('red')) {
+
+        Btn.classList.remove('red');
+        Btn.classList.add('grey');
+        Btn.textContent = 'Subscribed';
+    }
+ else {
+        Btn.classList.remove('grey');
+        Btn.classList.add('red');
+        Btn.textContent = 'Subscribe';
+    }
+});
+
+    
+    -->
